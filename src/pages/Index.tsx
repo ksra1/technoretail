@@ -4,6 +4,7 @@ import { ExecutiveSummary } from "@/components/ExecutiveSummary";
 import { ProductsOverview } from "@/components/ProductsOverview";
 import { TimelineSection } from "@/components/TimelineSection";
 import { ArchitectureSection } from "@/components/ArchitectureSection";
+import { ResourcePlan } from "@/components/ResourcePlan";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
         <ExecutiveSummary />
         <ProductsOverview />
         <TimelineSection />
+        <ResourcePlan />
         <ArchitectureSection />
       </main>
       <footer className="bg-card border-t border-border py-8 text-center">

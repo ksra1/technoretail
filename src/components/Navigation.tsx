@@ -7,6 +7,7 @@ const navItems = [
   { id: "summary", label: "Executive Summary" },
   { id: "products", label: "Products" },
   { id: "timeline", label: "Timeline" },
+  { id: "resources", label: "Resources" },
   { id: "architecture", label: "Architecture" },
 ];
 

@@ -11,7 +11,7 @@ export const ExecutiveSummary = () => {
   const challenges = [
     {
       title: "Fragmented Customer Experience",
-      color: "bg-challenge-blue",
+      color: "bg-secondary",
       points: [
         "Generic website experiences for all visitors",
         "No cross-channel recognition (online customers unknown in-store)",
@@ -21,7 +21,7 @@ export const ExecutiveSummary = () => {
     },
     {
       title: "Slow Marketing/Speed-to-Market",
-      color: "bg-challenge-teal",
+      color: "bg-accent",
       points: [
         "3 to 5 month campaign cycles",
         "IT bottlenecks for content changes",
@@ -31,7 +31,7 @@ export const ExecutiveSummary = () => {
     },
     {
       title: "Lack of Customer Intelligence",
-      color: "bg-info-teal",
+      color: "bg-primary",
       points: [
         "No consolidated customer view across systems",
         "Decisions based on incomplete data",
@@ -41,7 +41,7 @@ export const ExecutiveSummary = () => {
     },
     {
       title: "Organizational Silos",
-      color: "bg-info-cyan",
+      color: "bg-secondary/80",
       points: [
         "Disconnected teams and systems",
         "Data locked in separate platforms",
