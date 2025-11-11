@@ -11,43 +11,59 @@ export const ExecutiveSummary = () => {
   const challenges = [
     {
       title: "Fragmented Customer Experience",
-      color: "bg-secondary",
+      color: "bg-gradient-to-br from-red-50 via-white to-red-100 border-l-4 border-red-400",
+      textColor: "text-gray-900",
+      iconColor: "text-red-600",
+      bgIcon: "",
       points: [
         "Generic website experiences for all visitors",
         "No cross-channel recognition (online customers unknown in-store)",
         "Duplicate communications across channels",
       ],
       impact: "Impact: $6-9M conversion loss, 15-20% higher churn",
+      icon: "🔗",
     },
     {
       title: "Slow Marketing/Speed-to-Market",
-      color: "bg-accent",
+      color: "bg-gradient-to-br from-red-100 via-white to-red-150 border-l-4 border-red-500",
+      textColor: "text-gray-900",
+      iconColor: "text-red-700",
+      bgIcon: "",
       points: [
         "3 to 5 month campaign cycles",
         "IT bottlenecks for content changes",
         "Minimal content reuse across channels",
       ],
       impact: "Impact: $15-25M annual revenue loss, $8M wasted creative budget",
+      icon: "⏱️",
     },
     {
       title: "Lack of Customer Intelligence",
-      color: "bg-primary",
+      color: "bg-gradient-to-br from-red-150 via-white to-red-200 border-l-4 border-red-500",
+      textColor: "text-gray-900",
+      iconColor: "text-red-700",
+      bgIcon: "",
       points: [
         "No consolidated customer view across systems",
         "Decisions based on incomplete data",
         "Inconsistent ROI measurement",
       ],
       impact: "Impact: $12M wasted marketing spend, 25% preventable churn",
+      icon: "📊",
     },
     {
       title: "Organizational Silos",
-      color: "bg-secondary/80",
+      color: "bg-gradient-to-br from-red-200 via-white to-red-250 border-l-4 border-red-600",
+      textColor: "text-gray-900",
+      iconColor: "text-red-800",
+      bgIcon: "",
       points: [
         "Disconnected teams and systems",
         "Data locked in separate platforms",
         "Reactive IT support model",
       ],
       impact: "Impact: 35% longer project timelines, innovation stagnation",
+      icon: "🏢",
     },
   ];
 
@@ -69,20 +85,25 @@ export const ExecutiveSummary = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {challenges.map((challenge, index) => (
-              <Card key={index} className={`${challenge.color} text-white p-6 shadow-lg hover:shadow-xl transition-shadow`}>
-                <h3 className="text-xl font-bold mb-4">{challenge.title}</h3>
-                <ul className="space-y-2 mb-4">
+              <Card key={index} className={`${challenge.color} ${challenge.textColor} p-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300`}>
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="text-3xl flex-shrink-0">
+                    {challenge.icon}
+                  </div>
+                  <h3 className="text-xl font-bold leading-tight">{challenge.title}</h3>
+                </div>
+                <ul className="space-y-2 mb-6">
                   {challenge.points.map((point, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <span className="text-white/80 mt-1">•</span>
+                    <li key={i} className="flex items-start gap-3">
+                      <span className={`${challenge.iconColor} mt-1 font-bold`}>→</span>
                       <span className="text-sm">{point}</span>
                     </li>
                   ))}
                 </ul>
-                <div className="text-sm font-semibold mt-4 pt-4 border-t border-white/20">
-                  {challenge.impact}
+                <div className="text-sm font-bold mt-6 pt-4 border-t border-gray-300">
+                  <span className={challenge.iconColor}>{challenge.impact}</span>
                 </div>
               </Card>
             ))}

@@ -137,16 +137,16 @@ export const ResourcePlan = () => {
                 </div>
               </Card>
 
-              <Card className="mt-6 p-5 bg-accent/10 border-accent">
-                <h4 className="font-bold text-lg mb-3 text-accent-foreground">Total Team Size</h4>
-                <div className="grid grid-cols-2 gap-4 text-center">
+              <Card className="mt-6 p-6 bg-primary/10 border-2 border-primary">
+                <h4 className="font-bold text-xl mb-4 text-primary">Total Team Size</h4>
+                <div className="grid grid-cols-2 gap-6 text-center">
                   <div>
-                    <div className="text-3xl font-bold text-primary">13</div>
-                    <div className="text-sm text-muted-foreground">Total Resources</div>
+                    <div className="text-4xl font-bold text-primary">13</div>
+                    <div className="text-sm text-foreground font-medium">Total Resources</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-primary">9</div>
-                    <div className="text-sm text-muted-foreground">Months Duration</div>
+                    <div className="text-4xl font-bold text-primary">9</div>
+                    <div className="text-sm text-foreground font-medium">Months Duration</div>
                   </div>
                 </div>
               </Card>

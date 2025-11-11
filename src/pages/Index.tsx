@@ -15,12 +15,15 @@ const Index = () => {
         <ExecutiveSummary />
         <ProductsOverview />
         <TimelineSection />
-        <ResourcePlan />
         <ArchitectureSection />
+        <ResourcePlan />
       </main>
       <footer className="bg-card border-t border-border py-8 text-center">
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm text-muted-foreground mb-2">
           TechnoRetail Digital Transformation Proposal • Adobe Experience Cloud Solution Architecture
+        </p>
+        <p className="text-sm text-muted-foreground">
+          Prepared by Sravan Kollapudi
         </p>
       </footer>
     </div>
