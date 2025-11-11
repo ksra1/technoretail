@@ -130,25 +130,25 @@ export const ProductsOverview = () => {
                     </h4>
 
                     {/* Purpose */}
-                    <div className="mb-4" style={{ height: '130px', display: 'flex', flexDirection: 'column' }}>
+                    <div className="mb-4" style={{ height: '100px', display: 'flex', flexDirection: 'column' }}>
                       <p className="font-semibold text-slate-700 mb-1.5 text-sm">Purpose:</p>
                       <p className="text-slate-600 leading-relaxed text-sm flex-1">{product.purpose}</p>
                     </div>
 
                     {/* Connects To */}
-                    <div className="mb-4" style={{ height: '110px', display: 'flex', flexDirection: 'column' }}>
+                    <div className="mb-4" style={{ height: '150px', display: 'flex', flexDirection: 'column' }}>
                       <p className="font-semibold text-slate-700 mb-1.5 text-sm">Connects To:</p>
                       <p className="text-slate-600 leading-relaxed text-sm flex-1">{product.connects}</p>
                     </div>
 
                     {/* How */}
-                    <div className="mb-4" style={{ height: '140px', display: 'flex', flexDirection: 'column' }}>
+                    <div className="mb-4" style={{ height: '130px', display: 'flex', flexDirection: 'column' }}>
                       <p className="font-semibold text-slate-700 mb-1.5 text-sm">How:</p>
                       <p className="text-slate-600 leading-relaxed text-sm flex-1">{product.how}</p>
                     </div>
 
                     {/* Why */}
-                    <div style={{ height: '120px', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ height: '150px', display: 'flex', flexDirection: 'column' }}>
                       <p className="font-semibold text-slate-700 mb-1.5 text-sm">Why:</p>
                       <p className="text-slate-600 leading-relaxed text-sm flex-1">{product.why}</p>
                     </div>
