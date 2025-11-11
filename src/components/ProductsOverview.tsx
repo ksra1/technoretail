@@ -120,37 +120,37 @@ export const ProductsOverview = () => {
                       flexDirection: 'column',
                       padding: '1.5rem',
                       width: '250px',
-                      minHeight: '500px',
+                      height: '580px',
                       flexShrink: 0
                     }}
                   >
                     {/* Product name */}
-                    <h4 className="font-bold text-lg mb-4" style={{ color: category.textColor }}>
+                    <h4 className="font-bold text-lg mb-4" style={{ color: category.textColor, height: '32px' }}>
                       {product.name}
                     </h4>
 
                     {/* Purpose */}
-                    <div className="mb-4" style={{ minHeight: '120px' }}>
+                    <div className="mb-4" style={{ height: '110px', display: 'flex', flexDirection: 'column' }}>
                       <p className="font-semibold text-slate-700 mb-1.5 text-sm">Purpose:</p>
-                      <p className="text-slate-600 leading-relaxed text-sm">{product.purpose}</p>
+                      <p className="text-slate-600 leading-relaxed text-sm flex-1 overflow-hidden">{product.purpose}</p>
                     </div>
 
                     {/* Connects To */}
-                    <div className="mb-4" style={{ minHeight: '100px' }}>
+                    <div className="mb-4" style={{ height: '90px', display: 'flex', flexDirection: 'column' }}>
                       <p className="font-semibold text-slate-700 mb-1.5 text-sm">Connects To:</p>
-                      <p className="text-slate-600 leading-relaxed text-sm">{product.connects}</p>
+                      <p className="text-slate-600 leading-relaxed text-sm flex-1 overflow-hidden">{product.connects}</p>
                     </div>
 
                     {/* How */}
-                    <div className="mb-4" style={{ minHeight: '120px' }}>
+                    <div className="mb-4" style={{ height: '110px', display: 'flex', flexDirection: 'column' }}>
                       <p className="font-semibold text-slate-700 mb-1.5 text-sm">How:</p>
-                      <p className="text-slate-600 leading-relaxed text-sm">{product.how}</p>
+                      <p className="text-slate-600 leading-relaxed text-sm flex-1 overflow-hidden">{product.how}</p>
                     </div>
 
                     {/* Why */}
-                    <div style={{ minHeight: '100px' }}>
+                    <div style={{ height: '90px', display: 'flex', flexDirection: 'column' }}>
                       <p className="font-semibold text-slate-700 mb-1.5 text-sm">Why:</p>
-                      <p className="text-slate-600 leading-relaxed text-sm">{product.why}</p>
+                      <p className="text-slate-600 leading-relaxed text-sm flex-1 overflow-hidden">{product.why}</p>
                     </div>
                   </div>
                 ))}
