@@ -24,14 +24,14 @@ export const ProductsOverview = () => {
         {
           name: "Adobe Analytics",
           purpose: "Collects and analyzes site/app user behavioral data. Use for user behavior insights and campaign/channel performance.",
-          connects: "CJA, CDP, Marketing Exec Dash",
+          connects: "CJA, CDP, BI/Dashboard Tools (ex: Tableau, Qlik Sense)",
           how: "Collects event data through tags and SDKs; provides feeds and APIs to send data into CJA and enrich CDP profiles.",
           why: "Measures, analyzes digital touchpoints to inform personalization, optimize campaigns, and provide journey attribution.",
         },
         {
           name: "CJA",
           purpose: "Delivers real-time, cross-channel customer journey analytics and reporting. Use for unified journey KPIs.",
-          connects: "Adobe Analytics, CDP, Marketing Exec Dash",
+          connects: "Adobe Analytics, CDP, BI/Dashboard Tools (ex: Tableau, Qlik Sense)",
           how: "Pulls event, behavioral, and profile data from Analytics and CDP APIs; aggregates them to support dashboards and journey analysis tools.",
           why: "Provides holistic insights by unifying disparate channel and behavioral data for informed executive and operational decisions.",
         },
