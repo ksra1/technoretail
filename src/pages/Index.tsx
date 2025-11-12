@@ -14,8 +14,8 @@ const Index = () => {
         <IntroSection />
         <ExecutiveSummary />
         <ProductsOverview />
-        <TimelineSection />
         <ArchitectureSection />
+        <TimelineSection />
         <ResourcePlan />
       </main>
       <footer className="bg-card border-t border-border py-8 text-center">
