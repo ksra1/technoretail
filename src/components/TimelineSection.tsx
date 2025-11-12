@@ -15,7 +15,9 @@ export const TimelineSection = () => {
   const phases = [
     {
       name: "Foundation & Discovery",
-      color: "bg-slate-700",
+      color: "bg-red-700",
+      gradientFrom: "#DC2626",
+      gradientTo: "#7F1D1D",
       tasks: [
         { 
           name: "Workshops", 
@@ -86,7 +88,9 @@ export const TimelineSection = () => {
     },
     {
       name: "Solution Design",
-      color: "bg-orange-600",
+      color: "bg-red-600",
+      gradientFrom: "#EF4444",
+      gradientTo: "#991B1B",
       tasks: [
         { 
           name: "Solution Design: Blueprint & Integration Requirements", 
@@ -106,7 +110,9 @@ export const TimelineSection = () => {
     },
     {
       name: "Core Platform Build & Pilot",
-      color: "bg-emerald-600",
+      color: "bg-red-500",
+      gradientFrom: "#FCA5A5",
+      gradientTo: "#DC2626",
       tasks: [
         { 
           name: "SDK Instrumentation & Deployment: Web SDK", 
@@ -189,7 +195,9 @@ export const TimelineSection = () => {
     },
     {
       name: "Scale & Optimize",
-      color: "bg-slate-600",
+      color: "bg-red-800",
+      gradientFrom: "#7F1D1D",
+      gradientTo: "#450A0A",
       tasks: [
         { 
           name: "Expand Personalization and Predictive Analytics", 
@@ -223,6 +231,25 @@ export const TimelineSection = () => {
     },
   ];
 
+  // Calculate Gantt chart metrics
+  const startDate = new Date("2026-01-13");
+  const endDate = new Date("2026-09-24");
+  const totalDays = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+
+  const calculateGanttPosition = (taskStart: string, taskEnd: string) => {
+    const task = new Date(taskStart);
+    const end = new Date(taskEnd);
+    const start = new Date(startDate);
+    
+    const daysFromStart = Math.ceil((task.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+    const taskDuration = Math.ceil((end.getTime() - task.getTime()) / (1000 * 60 * 60 * 24)) + 1;
+    
+    const leftPercent = (daysFromStart / totalDays) * 100;
+    const widthPercent = (taskDuration / totalDays) * 100;
+    
+    return { leftPercent, widthPercent };
+  };
+
   return (
     <section id="timeline" className="min-h-screen py-20 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -231,6 +258,93 @@ export const TimelineSection = () => {
           <p className="text-center text-muted-foreground mb-12 text-lg">
             9-month rollout across 4 major phases
           </p>
+
+          {/* Gantt Chart Section */}
+          <div className="mb-16 bg-white dark:bg-slate-900 rounded-lg shadow-lg p-8">
+            <h3 className="text-2xl font-bold mb-8">Project Gantt Chart</h3>
+            
+            <div className="overflow-x-auto">
+              <div className="min-w-max">
+                {/* Timeline Headers */}
+                <div className="flex mb-8">
+                  <div className="w-64 flex-shrink-0 pr-4">
+                    <div className="text-sm font-semibold text-muted-foreground">Tasks</div>
+                  </div>
+                  <div className="flex-1 relative">
+                    <div className="flex justify-between text-xs text-muted-foreground mb-2">
+                      <span>Jan</span>
+                      <span>Feb</span>
+                      <span>Mar</span>
+                      <span>Apr</span>
+                      <span>May</span>
+                      <span>Jun</span>
+                      <span>Jul</span>
+                      <span>Aug</span>
+                      <span>Sep</span>
+                    </div>
+                    <div className="flex bg-muted/20 rounded h-1">
+                      {Array.from({ length: 9 }).map((_, i) => (
+                        <div key={i} className="flex-1 border-r border-muted/30 last:border-r-0" />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Gantt Bars */}
+                {phases.map((phase, phaseIndex) => (
+                  <div key={phaseIndex} className="mb-6">
+                    {/* Phase Header */}
+                    <div className="flex items-center mb-3">
+                      <div className="w-64 flex-shrink-0 pr-4">
+                        <div className="flex items-center gap-2">
+                          <div className={`h-3 w-3 rounded-full ${phase.color}`} />
+                          <span className="text-sm font-bold text-foreground">{phase.name}</span>
+                        </div>
+                      </div>
+                      <div className="flex-1 h-1 bg-gradient-to-r from-transparent to-transparent" />
+                    </div>
+
+                    {/* Tasks */}
+                    {phase.tasks.map((task, taskIndex) => {
+                      const { leftPercent, widthPercent } = calculateGanttPosition(task.start, task.end);
+                      return (
+                        <div key={taskIndex} className="flex items-center mb-2 group">
+                          <div className="w-64 flex-shrink-0 pr-4">
+                            <div className="text-xs text-muted-foreground truncate group-hover:text-foreground transition-colors">
+                              {task.name}
+                            </div>
+                          </div>
+                          <div className="flex-1 relative h-6 bg-muted/10 rounded">
+                            <div
+                              className="absolute h-full rounded opacity-90 hover:opacity-100 transition-opacity flex items-center justify-center group"
+                              style={{
+                                left: `${leftPercent}%`,
+                                width: `${widthPercent}%`,
+                                minWidth: widthPercent > 3 ? 'auto' : '48px',
+                                background: `linear-gradient(135deg, ${phase.gradientFrom} 0%, ${phase.gradientTo} 100%)`,
+                              }}
+                              title={`${task.name}: ${task.days} days`}
+                            >
+                              <span className="text-xs font-bold text-white whitespace-nowrap px-1">
+                                {task.days}d
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Legend */}
+            <div className="mt-8 pt-6 border-t border-border flex flex-wrap gap-6">
+              <div className="text-sm text-muted-foreground">
+                <span className="font-semibold text-foreground">Project Duration:</span> Jan 13 - Sep 24, 2026 ({totalDays} days)
+              </div>
+            </div>
+          </div>
 
           {/* Visual Timeline */}
           <div className="mb-12 relative">
