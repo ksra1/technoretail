@@ -18,7 +18,7 @@ export const IntroSection = () => {
           
           <div className="border-t border-b border-border py-6 my-8">
             <p className="text-xl text-muted-foreground mb-4">Presented By</p>
-            {/* <p className="text-2xl font-semibold">Sravan Kollapudi</p> */}
+            <p className="text-2xl font-semibold">Sravan Kollapudi</p>
           </div>
           
           <div className="bg-card border border-border rounded-lg p-6 shadow-lg">
