@@ -9,7 +9,7 @@ const navItems = [
   { id: "architecture", label: "Architecture" },
   { id: "timeline", label: "Timeline" },
   { id: "resources", label: "Resources" },
-  { id: "conclusion", label: "Solution & Outcomes" },
+  { id: "conclusion", label: "Conclusion" },
 ];
 
 export const Navigation = () => {

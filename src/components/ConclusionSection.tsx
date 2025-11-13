@@ -57,8 +57,22 @@ export const ConclusionSection = () => {
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-4 text-gray-900">Solution & Outcomes</h2>
+            <h2 className="text-5xl font-bold mb-4 text-gray-900">Conclusion</h2>
             <p className="text-xl text-red-600 font-semibold">Addressing Key Concerns with Strategic Initiatives</p>
+          </div>
+
+          {/* Expected Outcomes */}
+          <div className="bg-gradient-to-r from-red-50 via-white to-red-50 rounded-lg border-2 border-red-200 p-12 mb-16 shadow-lg">
+            <h3 className="text-3xl font-bold text-center mb-12 text-gray-900">Expected Business Outcomes</h3>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {outcomes.map((outcome, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-red-600 mb-2">{outcome.metric}</div>
+                  <div className="text-lg font-semibold text-gray-900 mb-1">{outcome.label}</div>
+                  <div className="text-sm text-gray-600">{outcome.sublabel}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* New Initiatives */}
@@ -93,20 +107,6 @@ export const ConclusionSection = () => {
                     </p>
                   </div>
                 </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* Expected Outcomes */}
-          <div className="bg-gradient-to-r from-red-50 via-white to-red-50 rounded-lg border-2 border-red-200 p-12 mb-16 shadow-lg">
-            <h3 className="text-3xl font-bold text-center mb-12 text-gray-900">Expected Business Outcomes</h3>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {outcomes.map((outcome, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-red-600 mb-2">{outcome.metric}</div>
-                  <div className="text-lg font-semibold text-gray-900 mb-1">{outcome.label}</div>
-                  <div className="text-sm text-gray-600">{outcome.sublabel}</div>
-                </div>
               ))}
             </div>
           </div>
