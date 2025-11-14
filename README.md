@@ -27,7 +27,7 @@ Follow these steps:
 git clone <YOUR_GIT_URL>
 
 # Step 2: Navigate to the project directory
-cd technoretai-journey-hub
+cd technoretail
 
 # Step 3: Install dependencies
 npm install
@@ -46,7 +46,7 @@ npm run preview
 
 This project is deployed to GitHub Pages. Changes pushed to the `main` branch will automatically trigger a deployment via GitHub Actions.
 
-Visit the live site at: `https://ksra1.github.io/technoretai-journey-hub/`
+Visit the live site at: `https://ksra1.github.io/technoretail/`
 
 ## Project Structure
 
