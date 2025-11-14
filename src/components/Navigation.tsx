@@ -47,7 +47,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="h-8 w-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-              <svg className="h-5 w-5 text-primary-foreground flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="h-5 w-5 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
               </svg>
             </div>
