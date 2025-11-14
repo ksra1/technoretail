@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { TRLogo } from "@/components/TRLogo";
 
 const navItems = [
   { id: "intro", label: "Introduction" },
@@ -45,12 +46,8 @@ export const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="h-8 w-8 bg-primary rounded-full flex items-center justify-center">
-              <svg className="h-5 w-5 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-              </svg>
-            </div>
+          <div className="flex items-center gap-3">
+            <TRLogo className="h-8 w-8" />
             <span className="font-bold text-lg">TechnoRetail Digital Transformation</span>
           </div>
           <div className="hidden md:flex gap-1">
