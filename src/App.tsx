@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
-// TechnoRetail Digital Transformation Platform
+// TechnoRetail Digital Transformation - GitHub Pages Deploy
 const queryClient = new QueryClient();
 
 const App = () => (
