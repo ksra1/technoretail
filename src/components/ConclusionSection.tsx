@@ -143,8 +143,7 @@ export const ConclusionSection = () => {
           {/* Call to Action */}
           <div className="text-center mt-16">
             <div className="inline-block bg-gradient-to-r from-red-400 to-red-300 rounded-lg p-8 shadow-lg max-w-2xl">
-              <h3 className="text-2xl font-bold text-white mb-3">Ready to Transform TechnoRetail?</h3>
-              <p className="text-white/90 mb-6">
+              <p className="text-white/90 mb-4">
                 This strategic initiative positions TechnoRetail to achieve $45-60M+ in incremental revenue while improving operational efficiency and customer satisfaction.
               </p>
               <p className="text-sm font-semibold text-white/80">
@@ -157,3 +156,4 @@ export const ConclusionSection = () => {
     </section>
   );
 };
+
