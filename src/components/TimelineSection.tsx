@@ -355,10 +355,10 @@ export const TimelineSection = () => {
           </div>
 
           {/* Gantt Chart Section */}
-          <div id="gantt-timeline" className="mb-16 bg-white dark:bg-slate-900 rounded-lg shadow-lg p-8">
-            <h3 className="text-2xl font-bold mb-8">Timeline</h3>
+          <div id="gantt-timeline" className="mb-16">
+            <h2 className="text-4xl font-bold text-center mb-12">Timeline</h2>
             
-            <div className="overflow-x-auto">
+            <div className="bg-white dark:bg-slate-900 rounded-lg shadow-lg p-8">
               <div className="min-w-max">
                 {/* Timeline Headers */}
                 <div className="flex mb-8">
