@@ -117,7 +117,7 @@ export const ExecutiveSummary = () => {
 
           {/* Unified Profile Diagram */}
           <div className="mb-16 p-8">
-            <h3 className="text-2xl font-bold mb-12 text-center">Key Challenges</h3>
+            <h3 className="text-2xl font-bold mb-12 text-center">Key Technical Challenges</h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Card 1: Unified Profile */}

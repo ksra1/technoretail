@@ -140,6 +140,8 @@ export const ConclusionSection = () => {
             </div>
           </div>
 
+          {/* connectors table moved to end of page */}
+
           {/* Call to Action */}
           <div className="text-center mt-16">
             <div className="inline-block bg-gradient-to-r from-red-400 to-red-300 rounded-lg p-8 shadow-lg max-w-2xl">
@@ -149,6 +151,112 @@ export const ConclusionSection = () => {
               <p className="text-sm font-semibold text-white/80">
                 Next Steps: Finalize scope, secure stakeholder alignment, and begin Phase 1 activities
               </p>
+            </div>
+          </div>
+
+          {/* AEP Integration Reference: Connectors Table moved to page end */}
+          <div className="mt-12 bg-white border rounded-lg p-6 shadow-sm">
+            <h4 className="text-2xl font-semibold mb-4 text-gray-900">AEP Integration Reference</h4>
+            <p className="text-sm text-gray-600 mb-4">Reference: which products send/receive data to/from Adobe Experience Platform.</p>
+
+            <div className="overflow-x-auto">
+              <table className="min-w-full text-sm text-left">
+                <thead>
+                  <tr className="bg-red-600">
+                    <th className="px-6 py-3 font-bold text-white whitespace-nowrap">Product</th>
+                    <th className="px-6 py-3 font-bold text-white">Purpose</th>
+                    <th className="px-6 py-3 font-bold text-white whitespace-nowrap">Sends to AEP</th>
+                    <th className="px-6 py-3 font-bold text-white whitespace-nowrap">Receives from AEP</th>
+                    <th className="px-6 py-3 font-bold text-white">Notes</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y">
+                  <tr>
+                    <td className="px-6 py-3 font-semibold whitespace-nowrap bg-white">Adobe Analytics</td>
+                    <td className="px-6 py-3 text-gray-600 bg-slate-50">Web and digital analytics tool to measure, analyze, and gain insights from customer interactions across channels.</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-white">Yes</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-slate-50">Limited (indirect)</td>
+                    <td className="px-6 py-3 text-gray-600 bg-white">Report suite data streamed via Analytics source connector.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3 font-semibold whitespace-nowrap bg-white">Adobe Campaign</td>
+                    <td className="px-6 py-3 text-gray-600 bg-slate-50">Cross-channel campaign management and orchestration for personalized marketing communications (email, SMS, etc.).</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-white">Yes</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-slate-50">Yes</td>
+                    <td className="px-6 py-3 text-gray-600 bg-white">Exports logs via connector/workflows; imports audiences for activation.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3 font-semibold whitespace-nowrap bg-white">Adobe Audience Manager (AAM)</td>
+                    <td className="px-6 py-3 text-gray-600 bg-slate-50">Data management platform (DMP) to collect, unify, and activate audience data for targeting.</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-white">Yes</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-slate-50">Yes</td>
+                    <td className="px-6 py-3 text-gray-600 bg-white">Traits/segments via source; audiences via Experience Cloud Audiences destination.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3 font-semibold whitespace-nowrap bg-white">Adobe Target</td>
+                    <td className="px-6 py-3 text-gray-600 bg-slate-50">Personalization and A/B testing tool to optimize and deliver tailored digital experiences.</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-white">No (indirect via Analytics)</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-slate-50">Yes</td>
+                    <td className="px-6 py-3 text-gray-600 bg-white">Receives audiences/attributes for personalization.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3 font-semibold whitespace-nowrap bg-white">Adobe Advertising</td>
+                    <td className="px-6 py-3 text-gray-600 bg-slate-50">Demand-side platform (DSP) and ad management for planning, buying, and optimizing cross-channel advertising campaigns.</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-white">No</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-slate-50">Yes</td>
+                    <td className="px-6 py-3 text-gray-600 bg-white">Activates audiences for targeting.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3 font-semibold whitespace-nowrap bg-white">Adobe Data Collection Tags</td>
+                    <td className="px-6 py-3 text-gray-600 bg-slate-50">Tag management system to deploy and manage data collection scripts across web/mobile properties.</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-white">Yes (primary)</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-slate-50">No</td>
+                    <td className="px-6 py-3 text-gray-600 bg-white">Streams behavioral data via Web/Mobile SDK to Edge Network.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3 font-semibold whitespace-nowrap bg-white">Adobe Experience Manager (AEM)</td>
+                    <td className="px-6 py-3 text-gray-600 bg-slate-50">Content management system (CMS) and digital asset management (DAM) for creating, managing, and delivering personalized content experiences.</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-white">Limited/indirect</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-slate-50">Limited</td>
+                    <td className="px-6 py-3 text-gray-600 bg-white">Via Tags for collection; consumes personalization via SDK.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3 font-semibold whitespace-nowrap bg-white">Adobe Journey Optimizer (AJO)</td>
+                    <td className="px-6 py-3 text-gray-600 bg-slate-50">Journey orchestration tool to design, execute, and personalize real-time customer journeys across channels.</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-white">Limited/indirect</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-slate-50">Yes (primary)</td>
+                    <td className="px-6 py-3 text-gray-600 bg-white">Built on AEP; uses profiles/audiences natively. Journey events can feed back indirectly. No dedicated source connector.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3 font-semibold whitespace-nowrap bg-white">Customer Journey Analytics (CJA)</td>
+                    <td className="px-6 py-3 text-gray-600 bg-slate-50">Advanced cross-channel analytics tool to visualize and analyze full customer journeys using AEP data.</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-white">No</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-slate-50">Yes (primary)</td>
+                    <td className="px-6 py-3 text-gray-600 bg-white">Built on AEP; analyzes data via direct connections to AEP datasets/Data Lake.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3 font-semibold whitespace-nowrap bg-white">Adobe Workfront</td>
+                    <td className="px-6 py-3 text-gray-600 bg-slate-50">Work and project management platform to plan, orchestrate, and track marketing/workflow operations.</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-white">Limited/indirect</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-slate-50">No</td>
+                    <td className="px-6 py-3 text-gray-600 bg-white">No native source/destination; possible via Workfront Fusion or APIs for custom sync.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3 font-semibold whitespace-nowrap bg-white">Adobe GenStudio for Performance Marketing</td>
+                    <td className="px-6 py-3 text-gray-600 bg-slate-50">Generative AI tool to rapidly create, customize, and optimize on-brand marketing content/assets for campaigns.</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-white">Limited/indirect</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-slate-50">Yes</td>
+                    <td className="px-6 py-3 text-gray-600 bg-white">Built on AEP; uses AEP data for content generation/insights. Performance metrics stored in AEP datasets.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3 font-semibold whitespace-nowrap bg-white">Adobe Workfront Fusion</td>
+                    <td className="px-6 py-3 text-gray-600 bg-slate-50">Integration and automation platform to connect apps, automate workflows, and sync data across systems.</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-white">Yes (custom/indirect)</td>
+                    <td className="px-6 py-3 whitespace-nowrap bg-slate-50">Yes (custom/indirect)</td>
+                    <td className="px-6 py-3 text-gray-600 bg-white">No native source/destination connectors. Enables bidirectional data flows via scenarios, APIs, or HTTP modules.</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>

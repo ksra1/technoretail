@@ -31,6 +31,8 @@ export const IntroSection = () => {
               <span>Jessica Narisety</span>
               <span className="text-muted-foreground">•</span>
               <span>Alex Glaser</span>
+              <span className="text-muted-foreground">•</span>
+              <span>Vince Hsieh</span>
             </div>
           </div>
 
