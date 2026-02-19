@@ -21,7 +21,7 @@ export const IntroSection = () => {
             <p className="text-lg font-medium">Sravan Kollapudi</p>
           </div>
           
-          <div className="bg-card border border-border rounded-lg p-6 shadow-lg">
+          {/* <div className="bg-card border border-border rounded-lg p-6 shadow-lg">
             <p className="text-sm text-muted-foreground mb-3">Presenting To</p>
             <div className="flex flex-wrap justify-center gap-4 text-xl font-medium">
               <span>Eric Wood</span>
@@ -34,7 +34,7 @@ export const IntroSection = () => {
               <span className="text-muted-foreground">•</span>
               <span>Vince Hsieh</span>
             </div>
-          </div>
+          </div> */}
 
           <div className="pt-12 animate-bounce">
             <svg className="h-6 w-6 mx-auto text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
